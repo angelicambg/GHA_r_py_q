@@ -1,7 +1,7 @@
 project:
   title: "quarto_report"
-  execute:
-    freeze: auto
+execute:
+  freeze: auto
 
 
 
