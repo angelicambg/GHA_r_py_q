@@ -1,7 +1,0 @@
-project:
-  title: "quarto_report"
-execute:
-  freeze: auto
-
-
-
