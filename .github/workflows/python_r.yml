@@ -25,36 +25,5 @@ jobs:
     - uses: r-lib/actions/setup-r@v2
     - run: Rscript -e 'print("hello")'
 
-  quarto-publish:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install R
-        uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: '4.2.0'
-
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages:
-            any::knitr
-            any::rmarkdown
-            any::downlit
-            any::xml2
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-          path: my_report_quarto
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
