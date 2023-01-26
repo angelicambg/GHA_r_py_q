@@ -22,8 +22,11 @@ jobs:
         with:
           r-version: '4.2.0'
 
-      - name: Install R Dependencies
-        uses: r-lib/actions/setup-renv@v2
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages:
+            any::rmarkdown
+            any::jsonlite
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
