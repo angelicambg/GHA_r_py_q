@@ -1,1 +1,1 @@
-Sitemap: https://angelicambg.github.io/GHA_r_py_q/sitemap.xml
+Sitemap: https://github.com/angelicambg/GHA_r_py_q/sitemap.xml
