@@ -18,6 +18,15 @@ jobs:
     - name: Install deps
       run: pip3 install --user requests beautifulsoup4 pandas
     - run: python football.py
+    - name: Commit files
+      run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull origin main
+          mv TextFootball.json TextFootball.json
+          git add TextFootball.json
+          git commit -m "update json"|| echo "Nothing to update"
+          git push
 
   print-hello-r:
     name: Print R
