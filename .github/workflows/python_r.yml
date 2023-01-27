@@ -23,7 +23,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull origin main
-          mv TextFootball.json TextFootball.json
           git add TextFootball.json
           git commit -m "update json"|| echo "Nothing to update"
           git push
